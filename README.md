@@ -14,15 +14,15 @@ Data Engineering 2 - Modern Data Platforms: dbt, Snowflake, Databricks, Apache S
 3. Set up Snowflake tables: https://dbtsetup.nordquant.com/?course=ceu
 
 ### dbt Setup
-4. Fork this repo and clone it to your PC: https://github.com/nordquant/dbt-student-repo
+4. Fork this repo as a private repository and clone it to your PC
 5. Ensure you have a compatible Python Version: https://docs.getdbt.com/faqs/Core/install-python-compatibility (if you don't, install Python 3.13)
 6. Install uv: https://docs.astral.sh/uv/getting-started/installation/
 7. Install packages: `uv sync`
 8. Activate the virtualenv:
    - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
    - Windows (CMD): `.venv\Scripts\activate.bat`
-   - macOS / Linux: `. .venv/bin/activate`
-
+   - WSL (Windows Subsystem for Linux): `source .venv/bin/activate`
+   - macOS / Linux: `source .venv/bin/activate`
 ---
 
 ## Starting a dbt Project

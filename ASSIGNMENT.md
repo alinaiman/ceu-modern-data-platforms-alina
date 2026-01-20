@@ -1,3 +1,5 @@
+# THIS md IS FOR A FUTURE ASSIGNMENT, IGNORE IT FOR NOW
+
 # dbt Assignment: AirStats Capstone Project
 
 Build a dbt project analyzing global airport data on Snowflake.
@@ -15,10 +17,12 @@ Build a dbt project analyzing global airport data on Snowflake.
 
 ### Step 1: Initialize the dbt Project
 
-* Fork this repository as a _private_ repository: https://github.com/zoltanctoth/ceu-dbt-assignment-repo 
-* Execute setup steps if working locally (see `README.md` in your fork)
-* Add your student id to `README.md`
-* Create a new dbt project called `airstats`
+* Add your student here (edit the next line):
+```
+Student id: REPLACE THIS WITH YOUR STUDENT ID
+```
+
+* Create a new dbt project called `airstats`. You only need to do the `dbt init ...` step, your uv/virtualenv is already up and running
 
 ### Step 2: Configure the Connection
 
@@ -234,9 +238,4 @@ All three models should complete successfully.
 
 ## Submission
 
-_I'm going to send you the complete assignment instructions by EOD 20 Jan 2026._
-
-* Invite `zoltanctoth` and `nai-coder` as collaborators to your private repository
-* Submission deadline: 11:59 pm, Sunday 25 January, 2026
-* Submission through Moodle.
-
+TODO
