@@ -6,19 +6,14 @@ Data Engineering 2 - Modern Data Platforms: dbt, Snowflake, Databricks, Apache S
 
 ## Installation
 
-### Databricks Setup
-1. Sign up for Databricks Free Edition: https://www.databricks.com/learn/free-edition
-
-### Snowflake Setup
-2. Register to Snowflake: https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2
-3. Set up Snowflake tables: https://dbtsetup.nordquant.com/?course=ceu
-
-### dbt Setup
-4. Fork this repo as a private repository and clone it to your PC
-5. Ensure you have a compatible Python Version: https://docs.getdbt.com/faqs/Core/install-python-compatibility (if you don't, install Python 3.13)
-6. Install uv: https://docs.astral.sh/uv/getting-started/installation/
-7. Install packages: `uv sync`
-8. Activate the virtualenv:
+1. **Databricks:** Sign up for Databricks Free Edition: https://www.databricks.com/learn/free-edition
+2. **Snowflake:** Register to Snowflake: https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2
+3. **Snowflake:** Set up Snowflake tables: https://dbtsetup.nordquant.com/?course=ceu
+4. **dbt:** Fork this repo as a private repository and clone it to your PC
+5. **dbt:** Ensure you have a compatible Python Version: https://docs.getdbt.com/faqs/Core/install-python-compatibility (if you don't, install Python 3.13)
+6. **dbt:** Install uv: https://docs.astral.sh/uv/getting-started/installation/
+7. **dbt:** Install packages: `uv sync`
+8. **dbt:** Activate the virtualenv:
    - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
    - Windows (CMD): `.venv\Scripts\activate.bat`
    - WSL (Windows Subsystem for Linux): `source .venv/bin/activate`
@@ -350,7 +345,7 @@ Add freshness configuration to the `reviews` source in `models/sources.yml`:
       - name: reviews
         identifier: raw_reviews
         config:
-          loaded_at_field: load
+          loaded_at_field: date
           freshness:
             warn_after: {count: 1, period: day}
 ```
@@ -601,7 +596,7 @@ FROM
 
 Create an **analysis** to investigate whether full moons affect review sentiment. Analyses are SQL files in the `analyses/` folder that are compiled but not materialized - they're useful for ad-hoc queries and reporting.
 
-**Task:** Create `analyses/fullmoon_sentiment.sql` that:
+**Task:** Create `analyses/full_moon_no_sleep.sql` that:
 
 1. References the `mart_fullmoon_reviews` model.
 2. Filters out neutral sentiments (only keep `'positive'` and `'negative'`).
@@ -618,7 +613,7 @@ Create an **analysis** to investigate whether full moons affect review sentiment
 
 **Run the analysis:**
 ```sh
-dbt show --select fullmoon_sentiment
+dbt show --select full_moon_no_sleep
 ```
 
 <details>
